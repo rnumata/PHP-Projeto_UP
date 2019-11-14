@@ -32,13 +32,15 @@ require_once "funcoesmysql.php";
     if(empty($_POST)){
 
     } else {
+
+        $id = $_POST['cad_id'];
         $item = $_POST['cad_item'];
         $descricao = $_POST['cad_descricao'];
         $tamanho = $_POST['cad_tamanho'];
         $valor = $_POST['cad_valor'];
 
-        $item = salvarproduto($item, $descricao, $tamanho, $valor, $url);
-        echo $item;
+        $novo_item = salvarproduto($id, $item, $descricao, $tamanho, $valor, $url);
+        echo $novo_item;
     }
 
 
@@ -58,13 +60,6 @@ require_once "funcoesmysql.php";
             $valor = $lista[0]['valor'];
             $url = $lista[0]['url'];
         }
-
-        if ($acao == "excluir"){
-            excluiritem($id);
-
-        }
-
-
     }
 
 
@@ -87,30 +82,6 @@ require_once "funcoesmysql.php";
 
 
 </head>
-
-
-<!----------------------------- NAV BAR -------------------------------->
-<div class="header">
-    <h2 class="logo">Camiceria</h2>
-
-    <input type="checkbox" id="chk">
-    <label for="chk" class="show-menu-btn">
-        <i class="fas fa-ellipsis-h"></i>
-    </label>
-
-    <ul class="menu">
-        <a href="#">Home</a>
-        <a href="#">Cliente</a>
-        <a href="#">Produto</a>
-        <a href="#">Manutenção</a>
-        <label for="chk" class="hide-menu-btn">
-            <i class="fas fa-times"></i>
-        </label>
-    </ul>
-</div>
-
-<!---------------------------------------------------------------------->
-
 
 
 <div class="container">

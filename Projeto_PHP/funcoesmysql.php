@@ -39,13 +39,23 @@
     }
 
 
-/* -- Função para Cadastrar Item -- */
+/* -- Função para Cadastrar ou Alterar o Item -- */
 
-    function salvarproduto($item, $descricao, $tamanho, $valor, $url){
+    function salvarproduto($id, $item, $descricao, $tamanho, $valor, $url){
 
         $pdo = conexao();
 
-        $stmt = $pdo->prepare ("INSERT INTO item (item, descricao, tamanho, valor, url) VALUES (:item, :descricao, :tamanho, :valor, :url)");
+        if(empty($id)){
+
+            $stmt = $pdo->prepare ("INSERT INTO item (item, descricao, tamanho, valor, url) VALUES (:item, :descricao, :tamanho, :valor, :url)");
+
+        } else {
+
+            $stmt = $pdo->prepare("UPDATE item SET item = :item, descricao = :descricao, tamanho = :tamanho, valor = :valor, url = :url WHERE id = :id");
+            $stmt-> bindParam(":id", $id);
+
+        }
+
 
         $stmt-> bindParam(":item", $item);
         $stmt-> bindParam(":descricao", $descricao);
@@ -54,7 +64,7 @@
         $stmt-> bindParam(":url", $url);
 
         if($stmt->execute()){
-            return "<script>alert('Cadastro efetuado com sucesso!');</script>";
+            return "<script>alert('Operação efetuada com sucesso!');</script>";
         } else {
             print_r($stmt->errorInfo());
             return "Não foi possível salvar as informações";
