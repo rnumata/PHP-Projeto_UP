@@ -132,8 +132,47 @@
     }
 
 
+/* -- Função para validar login --*/
+
+    function validarusuario($usuario){
+
+        $pdo = conexao();
+
+        $stmt = $pdo->prepare("SELECT nome, senha FROM cadastro WHERE nome= :nome");
+
+        $stmt-> bindParam(":nome", $usuario);
+
+        if ($stmt->execute()) {
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } else {
+            print_r($stmt->errorInfo());
+            return "Não foi possível realizar a consulta.";
+        }
+
+    }
 
 
+
+/* -- Função para finalizar a compra --*/
+
+    function finalizarcompra ($usuario, $id, $tamanho, $qtd){
+
+        $pdo = conexao();
+
+        $stmt = $pdo->prepare ("INSERT INTO carrinho (usuario, item, tamanho, qtd) VALUES (:usuario, :item, :tamanho, :qtd)");
+
+        $stmt-> bindParam(":usuario", $usuario);
+        $stmt-> bindParam(":item", $id);
+        $stmt-> bindParam(":tamanho", $tamanho);
+        $stmt-> bindParam(":qtd", $qtd);
+
+        if($stmt->execute()){
+            return "<script>alert('Operação efetuada com sucesso!');</script>";
+        } else {
+            print_r($stmt->errorInfo());
+            return "Não foi possível salvar as informações";
+        }
+    }
 
 
 

@@ -10,12 +10,11 @@
             $_SESSION['carrinho'] = array();
         }
 
-    /*Se o$_GET estiver vazio faz acao = branco.
+    /*Se o $_GET estiver vazio faz acao = branco.
       Se o $_GET não estiver vazio inseri no array se acao = inserir e faz um unset se acao = excluir */
-
-
         if(empty($_GET)){
             $acao = "";
+            
         } else
             if(!empty($_GET)){
                 $acao = $_GET['acao'];
@@ -29,10 +28,23 @@
                 $id = $_GET['id'];
                 $lista = listaritem($id);
                 array_push($_SESSION['carrinho'], $lista);
-            }
+
+                } elseif ($acao == "finalizar"){
+                    foreach ($_SESSION['carrinho'] as $key => $final){
+                        $usuario = "teste1";
+                        $qtd =  "1";
+                        $id = $final[0]['id'];
+                        $tamanho =  $final[0]['tamanho'];
+
+                        $final = finalizarcompra($usuario, $id, $tamanho, $qtd);
+                    }
+                    session_destroy();
+                    header("location: carrinho.php");
+                }
 
     //Variavel recebe o array carrinho para fazer um foreach
         $carrinho = $_SESSION['carrinho'];
+
     ?>
 
 
@@ -64,7 +76,7 @@
                             <a class="nav-link text-white p" href="carrinho.php">Carrinho</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled text-white p" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            <a class="nav-link text-white p" href="login.php" tabindex="-1" aria-disabled="true">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -123,6 +135,12 @@
 
                 </table>
             </div>
+
+
+            <a href="carrinho.php?acao=finalizar">
+                <button type="button" class="btn btn-light">Finalizar<i class="fa fa-shopping-cart"></i></button>
+            </a>
+
         </div>
 
 

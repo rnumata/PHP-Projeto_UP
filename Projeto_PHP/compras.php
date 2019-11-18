@@ -34,7 +34,7 @@ require_once 'funcoesmysql.php';
                         <a class="nav-link text-white p" href="carrinho.php">Carrinho</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled text-white p" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link text-white p" href="login.php" tabindex="-1" aria-disabled="true">Login</a>
                     </li>
                 </ul>
             </div>

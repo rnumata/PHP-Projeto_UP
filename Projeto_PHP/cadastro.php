@@ -4,6 +4,7 @@
 
     require_once "funcoesmysql.php";
 
+
     $nome = "";
     $sobrenome = "";
     $email = "";
@@ -35,7 +36,6 @@
     }
 
 
-
 ?>
 
 
@@ -52,31 +52,6 @@
 
 
 </head>
-
-
-<!----------------------------- NAV BAR -------------------------------->
-<div class="header">
-    <h2 class="logo">Camiceria</h2>
-
-    <input type="checkbox" id="chk">
-    <label for="chk" class="show-menu-btn">
-        <i class="fas fa-ellipsis-h"></i>
-    </label>
-
-    <ul class="menu">
-        <a href="#">Home</a>
-        <a href="#">Camisas</a>
-        <a href="#">Ternos</a>
-        <a href="#">Gravatas</a>
-        <a href="#">Acessórios</a>
-        <label for="chk" class="hide-menu-btn">
-            <i class="fas fa-times"></i>
-        </label>
-    </ul>
-</div>
-
-
-
 
 
 <div class="container">
