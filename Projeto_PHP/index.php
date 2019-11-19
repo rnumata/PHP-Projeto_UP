@@ -102,7 +102,7 @@
                 <div class="w3-display-container">
                     <img src="_imagens/CAzul.png" style="width:90%">
                     <div class="w3-display-middle w3-display-hover">
-                        <a href="carrinho.php?acao=inserir$id=10"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button></a>
+                        <a href="carrinho.php?acao=inserir&id=10"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button></a>
                     </div>
                 </div>
                 <p>Mega Ripped Jeans<br><b>$19.99</b></p>

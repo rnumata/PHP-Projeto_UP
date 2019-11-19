@@ -22,6 +22,31 @@ require_once 'funcoesmysql.php';
 
 <body>
 
+    <!-- Navbar -->
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white p"  href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p" href="carrinho.php">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p" href="login.php" tabindex="-1" aria-disabled="true">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div><br>
+
+
     <h1 style="text-align: center">Lista de item cadastrado</h1><br><br>
 
     <div class="container">

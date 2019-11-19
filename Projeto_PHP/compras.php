@@ -23,6 +23,7 @@ require_once 'funcoesmysql.php';
 
 <body>
 
+    <!-- Navbar -->
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">

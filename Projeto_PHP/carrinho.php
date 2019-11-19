@@ -138,7 +138,7 @@
 
 
             <a href="carrinho.php?acao=finalizar">
-                <button type="button" class="btn btn-light">Finalizar<i class="fa fa-shopping-cart"></i></button>
+                <button type="button" class="btn btn-light">Finalizar <i class="fa fa-shopping-cart"></i></button>
             </a>
 
         </div>

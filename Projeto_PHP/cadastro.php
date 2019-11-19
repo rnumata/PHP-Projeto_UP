@@ -52,119 +52,143 @@
 
 
 </head>
+<body>
 
-
-<div class="container">
-        <br>
-        <h1 style="text-align: center">Cadastro de Cliente</h1>
-
-      <form id="cadastro" method="POST" action="cadastro.php" >
-
-        <div class="form-row">
-            <div class="col"><br>
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" name="cad_nome" required="required">
-            </div>
-            <div class="col"><br>
-                <label for="sobrenome">Sobrenome</label>
-                <input type="text" class="form-control" name="cad_sobrenome" required="required">
-            </div>
-        </div>
-        <br>
-
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="cad_email" name="cad_email" required="required">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="inputPassword4">Senha</label>
-                <input type="password" class="form-control" id="cad_senha" name="cad_senha" required="required">
+    <!-- Navbar -->
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white p"  href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p" href="carrinho.php">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p" href="login.php" tabindex="-1" aria-disabled="true">Login</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <br>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div><br>
 
-        <div class="form-group">
-            <label for="inputAddress">Endereço</label>
-            <input type="text" class="form-control" id="cad_end" name="cad_endereco" required="required">
-        </div>
 
-        <div class="form-group">
-            <label for="inputAddress2">Complemento</label>
-            <input type="text" class="form-control" id="cad_comple" placeholder="Apartamento, casa, ou andar" name="cad_complemento" required="required">
-        </div>
-        <br>
+    <div class="container">
+            <br>
+            <h1 style="text-align: center">Cadastro de Cliente</h1>
 
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="cad_cidade" name="cad_cidade" required="required">
+          <form id="cadastro" method="POST" action="cadastro.php" >
+
+            <div class="form-row">
+                <div class="col"><br>
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" name="cad_nome" required="required">
+                </div>
+                <div class="col"><br>
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" name="cad_sobrenome" required="required">
+                </div>
             </div>
-            <div class="form-group col-md-4">
-                <label for="inputState">Estado</label>
-                <select id="inputState" class="form-control" name="cad_estado" required="required">
-                    <option selected>Selecionar</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espirito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select>
+            <br>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="cad_email" name="cad_email" required="required">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Senha</label>
+                    <input type="password" class="form-control" id="cad_senha" name="cad_senha" required="required">
+                </div>
             </div>
-            
+            <br>
 
-            <div class="form-group col-md-2">
-                <label for="inputZip">CEP</label>
-                <input type="text" class="form-control cep" id="inputZip" name="cad_cep" required="required">
+            <div class="form-group">
+                <label for="inputAddress">Endereço</label>
+                <input type="text" class="form-control" id="cad_end" name="cad_endereco" required="required">
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="inputAddress2">Complemento</label>
+                <input type="text" class="form-control" id="cad_comple" placeholder="Apartamento, casa, ou andar" name="cad_complemento" required="required">
+            </div>
+            <br>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Cidade</label>
+                    <input type="text" class="form-control" id="cad_cidade" name="cad_cidade" required="required">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">Estado</label>
+                    <select id="inputState" class="form-control" name="cad_estado" required="required">
+                        <option selected>Selecionar</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
 
 
-        <div>
-            <button type="submit">Enviar</button>
-        </div>
-    </form>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">CEP</label>
+                    <input type="text" class="form-control cep" id="inputZip" name="cad_cep" required="required">
+                </div>
+            </div>
 
 
-    <!-- script bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
 
-    <!-- src do js -->    
-    <script src = "_js/jquery.mask.js"></script>    
 
-    <!--copiar mask do jquery -->
-    <!--
-    <script>
-       $(document).ready(function(){
-        $('.cep').mask('00000-000');
-        });
-    </script>
-    -->
+        <!-- script bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-</div>
+        <!-- src do js -->
+        <script src = "_js/jquery.mask.js"></script>
+
+        <!--copiar mask do jquery -->
+        <!--
+        <script>
+           $(document).ready(function(){
+            $('.cep').mask('00000-000');
+            });
+        </script>
+        -->
+    </div>
 </body>
 </html>
