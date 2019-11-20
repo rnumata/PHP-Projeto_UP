@@ -2,7 +2,7 @@
 
     require_once "funcoesmysql.php";
 
-    //session_start();
+    session_start();
 
     if(!empty($_POST)){
 
@@ -10,7 +10,7 @@
         $senha = $_POST['password'];
 
         $user_pass = validarusuario($usuario);
-        //var_dump($user_pass);
+
 
         if(empty($user_pass)){
 
@@ -36,7 +36,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../Projeto_PHP/_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

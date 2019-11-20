@@ -5,10 +5,12 @@
         session_start();
 
 
+
     //Se a $_SESSION vazia cria um array $_SESSION com nome de carrinho
         if(empty($_SESSION)){
             $_SESSION['carrinho'] = array();
         }
+        
 
     /*Se o $_GET estiver vazio faz acao = branco.
       Se o $_GET não estiver vazio inseri no array se acao = inserir e faz um unset se acao = excluir */
@@ -99,7 +101,7 @@
 
             <div class="row">
 
-                <table class="table">
+                <table class="table table-striped" >
                     <tr>
                         <th>Imagem</th>
                         <th>Item</th>

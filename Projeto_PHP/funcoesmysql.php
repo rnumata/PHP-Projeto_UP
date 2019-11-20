@@ -175,5 +175,25 @@
     }
 
 
+/* -- Função para listar os estados cadastrados --*/
+
+function listarestados(){
+
+    $pdo = conexao();
+
+    $stmt = $pdo->prepare("SELECT * FROM estados ORDER BY estado");
+
+    if ($stmt->execute()) {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        print_r($stmt->errorInfo());
+        return "Não foi possível realizar a consulta.";
+    }
+
+}
+
+
+
+
 
 ?>
