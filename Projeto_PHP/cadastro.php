@@ -138,11 +138,8 @@
 
                         <?php
                             foreach ($lista_estados as $estado){
-
                         ?>
-
                                 <option value="<?=$estado['id'];?>"><?=$estado['estado']?></option>
-                                
                         <?php
                            }
                         ?>
@@ -173,13 +170,13 @@
         <script src = "_js/jquery.mask.js"></script>
 
         <!--copiar mask do jquery -->
-        <!--
+        
         <script>
            $(document).ready(function(){
             $('.cep').mask('00000-000');
             });
         </script>
-        -->
+        
     </div>
 </body>
 </html>

@@ -11,6 +11,7 @@
             $_SESSION['carrinho'] = array();
         }
         
+        
 
     /*Se o $_GET estiver vazio faz acao = branco.
       Se o $_GET não estiver vazio inseri no array se acao = inserir e faz um unset se acao = excluir */
@@ -33,7 +34,7 @@
 
                 } elseif ($acao == "finalizar"){
                     foreach ($_SESSION['carrinho'] as $key => $final){
-                        $usuario = "teste1";
+                        $usuario = $_SESSION['usuario'];
                         $qtd =  "1";
                         $id = $final[0]['id'];
                         $tamanho =  $final[0]['tamanho'];
