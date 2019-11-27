@@ -20,8 +20,8 @@
 
             if($senha == $user_pass[0]['senha'] && $usuario == $user_pass[0]['nome']){
 
-                $_SESSION['usuario'] = $usuario;
-                echo "<script>window.location='index.php';alert('Usuario Logado!!');</script>";
+                //$_SESSION['usuario'] = $user_pass[0]['nome'];
+                header ("location: index.php");
 
             } else {
                 echo "<script>alert('Usuario e/ou Senha Inválido ');</script>";

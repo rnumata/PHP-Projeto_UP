@@ -5,12 +5,10 @@
         session_start();
 
 
-
     //Se a $_SESSION vazia cria um array $_SESSION com nome de carrinho
-        if(empty($_SESSION)){
+        if(empty($_SESSION['carrinho'])){
             $_SESSION['carrinho'] = array();
         }
-        
         
 
     /*Se o $_GET estiver vazio faz acao = branco.
@@ -34,7 +32,7 @@
 
                 } elseif ($acao == "finalizar"){
                     foreach ($_SESSION['carrinho'] as $key => $final){
-                        $usuario = $_SESSION['usuario'];
+                        $usuario = "teste1";
                         $qtd =  "1";
                         $id = $final[0]['id'];
                         $tamanho =  $final[0]['tamanho'];
