@@ -20,7 +20,7 @@
 
             if($senha == $user_pass[0]['senha'] && $usuario == $user_pass[0]['nome']){
 
-                //$_SESSION['usuario'] = $user_pass[0]['nome'];
+                $_SESSION['usuario'] = $user_pass[0]['nome'];
                 header ("location: index.php");
 
             } else {

@@ -32,7 +32,7 @@
 
                 } elseif ($acao == "finalizar"){
                     foreach ($_SESSION['carrinho'] as $key => $final){
-                        $usuario = "teste1";
+                        $usuario = $_SESSION['usuario'];
                         $qtd =  "1";
                         $id = $final[0]['id'];
                         $tamanho =  $final[0]['tamanho'];

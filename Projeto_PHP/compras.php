@@ -63,7 +63,7 @@ require_once 'funcoesmysql.php';
 
 
             <div class="card" style="width: 18rem; margin: 5px">
-                <a href="produto.php"><img src="<?=$url?>" class="card-img-top" alt="Sem Foto"></a>
+                <a href="detalhes.php?acao=exibir&id=<?=$id?>"> <img src="<?=$url?>" class="card-img-top" alt="Sem Foto"> </a>
                 <div class="card-body">
                     <h5 class="card-title"><?=$item?></h5>
                     <p class="card-text"><?=$desc?></p>

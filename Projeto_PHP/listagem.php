@@ -28,13 +28,10 @@ require_once 'funcoesmysql.php';
             <div class="bg-dark p-4">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white p"  href="index.php">Home</a>
+                        <a class="nav-link text-white p"  href="login.php">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white p" href="carrinho.php">Carrinho</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white p" href="login.php" tabindex="-1" aria-disabled="true">Login</a>
+                        <a class="nav-link text-white p" href="produto.php" tabindex="-1" aria-disabled="true">Cadastro Item</a>
                     </li>
                 </ul>
             </div>

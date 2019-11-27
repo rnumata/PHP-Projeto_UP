@@ -62,8 +62,8 @@ require_once "funcoesmysql.php";
         }
     }
 
-
-
+    //Variavel $lista_estados recebe um array associativo da função listarestados
+    $lista_tamanho = listartamanho();
 
 
 ?>
@@ -90,13 +90,10 @@ require_once "funcoesmysql.php";
             <div class="bg-dark p-4">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white p"  href="index.php">Home</a>
+                        <a class="nav-link text-white p"  href="login.php">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white p" href="carrinho.php">Carrinho</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white p" href="login.php" tabindex="-1" aria-disabled="true">Login</a>
+                        <a class="nav-link text-white p" href="listagem.php" tabindex="-1" aria-disabled="true">Manutenção Item</a>
                     </li>
                 </ul>
             </div>
@@ -142,12 +139,20 @@ require_once "funcoesmysql.php";
             <div class="form-row">
                 <div class="col-sm-5"><br>
                     <label for="select">Tamanho</label>
+
                     <select class="form-control" id="select" name="cad_tamanho">
                         <option selected value="">Selecionar</option>
-                        <option value="p">Pequeno</option>
-                        <option value="m">Medio</option>
-                        <option value="g">Grande</option>
-                        <option value="gg">Extra grande</option>
+
+                        <?php
+                            foreach ($lista_tamanho as $tamanhos){
+                        ?>
+
+                        <option value="<?=$tamanhos['id'];?>"><?=$tamanhos['tam']?></option>
+
+                        <?php
+                          }
+                        ?>
+
                     </select>
                 </div>
 

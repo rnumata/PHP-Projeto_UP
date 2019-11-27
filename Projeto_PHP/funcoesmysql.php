@@ -193,6 +193,24 @@ function listarestados(){
 }
 
 
+/* -- Função para listar os tamanhos --*/
+
+function listartamanho(){
+
+    $pdo = conexao();
+
+    $stmt = $pdo->prepare("SELECT * FROM tam ORDER BY id");
+
+    if ($stmt->execute()) {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        print_r($stmt->errorInfo());
+        return "Não foi possível realizar a consulta.";
+    }
+
+}
+
+
 
 
 
