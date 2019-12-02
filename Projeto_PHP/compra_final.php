@@ -1,8 +1,7 @@
 <?php
 require_once 'funcoesmysql.php';
 
-
-
+    $compras = listarcompras();
 
 ?>
 <html>
@@ -46,25 +45,23 @@ require_once 'funcoesmysql.php';
 
             <table class="table">
                 <tr>
-                    <th>Imagem</th>
                     <th>Cliente</th>
                     <th>Item</th>
                     <th>Quantidade</th>
+                    <th>Valor</th>
                 </tr>
 
             <?php
 
-            $itens = listarproduto();
-            foreach ($itens as $item) {
+            foreach ($compras as $list) {
 
                 ?>
 
                 <tr>
-                    <td> <img src="<?=$item['url'];?>" width="60px" height="60px"> </td>
-                    <td> <?=$item['id'];?> </td>
-                    <td> <?=$item['descricao'];?> </td>
-                    <td> <?=$item['tamanho'];?> </td>
-                    <td> <?=$item['valor'];?> </td>
+                    <td> <?=$list['nome'];?>  </td>
+                    <td> <?=$list['item']?></td>
+                    <td> <?=$list['qtd'];?> </td>
+                    <td> <?=$list['tam'];?> </td>
                 </tr>
 
                 <?php

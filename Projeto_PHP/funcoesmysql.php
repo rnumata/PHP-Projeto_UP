@@ -211,6 +211,23 @@ function listartamanho(){
 }
 
 
+/* -- Função para listar as compras realizadas --*/
+
+function listarcompras(){
+
+    $pdo = conexao();
+
+    $stmt = $pdo->prepare("SELECT c.nome, i.item, a.qtd, t.tam FROM cadastro c join carrinho a on c.id = a.usuario join item i on i.id = a.item join tam t on t.id = a.tamanho order by c.nome");
+
+    if ($stmt->execute()) {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+        print_r($stmt->errorInfo());
+        return "Não foi possível realizar a consulta.";
+    }
+
+}
+
 
 
 

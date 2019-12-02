@@ -95,6 +95,9 @@ require_once "funcoesmysql.php";
                     <li class="nav-item">
                         <a class="nav-link text-white p" href="listagem.php" tabindex="-1" aria-disabled="true">Manutenção Item</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white p" href="compra_final.php" tabindex="-1" aria-disabled="true">Lista de Compras</a>
+                    </li>
                 </ul>
             </div>
         </div>
