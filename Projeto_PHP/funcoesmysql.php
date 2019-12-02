@@ -138,7 +138,7 @@
 
         $pdo = conexao();
 
-        $stmt = $pdo->prepare("SELECT nome, senha FROM cadastro WHERE nome= :nome");
+        $stmt = $pdo->prepare("SELECT id, nome, senha FROM cadastro WHERE nome= :nome");
 
         $stmt-> bindParam(":nome", $usuario);
 

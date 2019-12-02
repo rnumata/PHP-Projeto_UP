@@ -5,43 +5,53 @@
         session_start();
 
 
-    //Se a $_SESSION vazia cria um array $_SESSION com nome de carrinho
-        if(empty($_SESSION['carrinho'])){
-            $_SESSION['carrinho'] = array();
-        }
-        
+    //Se a $_SESSION ['usuario'] vazia dá alert e direciona para o login.php. Senão inseri no carrinho
 
-    /*Se o $_GET estiver vazio faz acao = branco.
-      Se o $_GET não estiver vazio inseri no array se acao = inserir e faz um unset se acao = excluir */
-        if(empty($_GET)){
-            $acao = "";
-            
-        } else
-            if(!empty($_GET)){
-                $acao = $_GET['acao'];
-        }
+        if(empty($_SESSION['usuario'])){
+            echo "<script>window.location='login.php'; alert('Fazer Login');</script>";
 
-            if($acao == "excluir"){
+        } else {
+
+            //Se a $_SESSION vazia cria um array $_SESSION com nome de carrinho
+            if (empty($_SESSION['carrinho'])) {
+                $_SESSION['carrinho'] = array();
+            }
+
+          
+
+            /*Se o $_GET estiver vazio faz acao = branco.
+              Se o $_GET não estiver vazio inseri no array se acao = inserir e faz um unset se acao = excluir */
+            if (empty($_GET)) {
+                $acao = "";
+
+            } else
+                if (!empty($_GET)) {
+                    $acao = $_GET['acao'];
+                }
+
+            if ($acao == "excluir") {
                 $id = $_GET['id'];
                 unset($_SESSION['carrinho'][$id]);
 
-            } elseif ($acao == "inserir"){
+            } elseif ($acao == "inserir") {
                 $id = $_GET['id'];
                 $lista = listaritem($id);
                 array_push($_SESSION['carrinho'], $lista);
 
-                } elseif ($acao == "finalizar"){
-                    foreach ($_SESSION['carrinho'] as $key => $final){
-                        $usuario = $_SESSION['usuario'];
-                        $qtd =  "1";
-                        $id = $final[0]['id'];
-                        $tamanho =  $final[0]['tamanho'];
+            } elseif ($acao == "finalizar") {
+                foreach ($_SESSION['carrinho'] as $key => $final) {
+                    $usuario = $_SESSION['usuario'];
+                    $qtd = "1";
+                    $id = $final[0]['id'];
+                    $tamanho = $final[0]['tamanho'];
 
-                        $final = finalizarcompra($usuario, $id, $tamanho, $qtd);
-                    }
-                    session_destroy();
-                    header("location: carrinho.php");
+                    $final = finalizarcompra($usuario, $id, $tamanho, $qtd);
                 }
+                session_destroy();
+                echo "<script>window.location='index.php'; alert('Compra efetuada com sucesso!!');</script>";
+            }
+
+        }
 
     //Variavel recebe o array carrinho para fazer um foreach
         $carrinho = $_SESSION['carrinho'];
@@ -144,18 +154,12 @@
 
         </div>
 
-
-
-
-
-
-
-
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="js/jquery.mask.js"></script>
         <script src="js/jquery.validate.min.js"></script>
+
     </body>
 </html>
 

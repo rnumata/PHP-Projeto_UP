@@ -12,6 +12,7 @@
     $itens = listaritem($id);
 
 
+
 ?>
 
 
@@ -21,12 +22,41 @@
     <meta charset="UTF-8">
     <title>Listagem - Item</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style>
+
+        .container{
+            width: 900px;
+            height: 350px;
+            margin: 0 auto;
+        }
+
+        .descricao{
+            width: 600px;
+            height: 350px;
+            border: 1px solid #fff;
+            margin-left: 10px;
+            padding-top: 100px;
+            text-align: left;
+        }
+
+        .image-content{
+            width: 290px;
+            height: 350px;
+            padding: 50px;
+        }
+
+        .card-body{
+            margin-left: 332px;
+        }
+
+
+    </style>
 
 </head>
 <body>
@@ -57,16 +87,22 @@
 
     <br><br><br>
 
-    <div class="row">
-
-            <div class="image-content">
-                <img src="<?=$itens[0]['url']?>">
+    <div class="container marketing">
+        <div class="row featurette">
+            <div class="col-md-3 order-md-1">
+                <a href="compras.php">
+                    <img src="<?=$itens[0]['url']?>">
+                </a>
             </div>
-            <div class="descricao">
+            <div class="col-md-7 descricao order-md-2">
                 <p>
                     O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.
                 </p>
+            </div></br>
+            <div class="row">
+                <h1 class="featurette-heading">R$<?=$itens[0]['valor']?> </h1>
             </div>
+        </div>
     </div>
 
 
@@ -76,7 +112,7 @@
         </a>
     </div>
 
-
+    <hr class="featurette-divider">
 
 
 

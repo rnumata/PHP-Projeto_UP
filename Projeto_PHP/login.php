@@ -20,7 +20,7 @@
 
             if($senha == $user_pass[0]['senha'] && $usuario == $user_pass[0]['nome']){
 
-                $_SESSION['usuario'] = $user_pass[0]['nome'];
+                $_SESSION['usuario'] = $user_pass[0]['id'];
                 header ("location: index.php");
 
             } else {
@@ -36,7 +36,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -62,7 +62,7 @@
 
                         <div class="form-group">
                             <label for="password" class="text-info">Senha:</label><br>
-                            <input type="text" name="password" id="password" class="form-control" required="required">
+                            <input type="password" name="password" id="password" class="form-control" required="required">
                         </div>
 
                         <div class="form-group">
@@ -81,11 +81,5 @@
     </div>
 </div>
 </body>
-
-
-
-
-
-
 
 </html>

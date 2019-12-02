@@ -38,12 +38,13 @@
 
     //Variavel $lista_estados recebe um array associativo da função listarestados
     $lista_estados = listarestados();
+    
 
 ?>
 
 
 
-<html lang="en">
+<html lang="pt-br">
 <head>
 
     <meta charset="UTF-8">
