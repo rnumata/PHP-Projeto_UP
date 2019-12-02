@@ -11,8 +11,6 @@
 
     $itens = listaritem($id);
 
-
-
 ?>
 
 
@@ -31,7 +29,7 @@
     <style>
 
         .container{
-            width: 900px;
+            width: 1400px;
             height: 350px;
             margin: 0 auto;
         }
@@ -89,7 +87,7 @@
 
     <div class="container marketing">
         <div class="row featurette">
-            <div class="col-md-3 order-md-1">
+            <div class="col-md-3 order-md-1 image-content">
                 <a href="compras.php">
                     <img src="<?=$itens[0]['url']?>">
                 </a>

@@ -60,7 +60,7 @@
 
     <!-- Top header -->
     <header class="w3-container w3-xlarge">
-        <p class="w3-left">Jeans</p>
+        <p class="w3-left">Jeans <a href="produto.php"><i class="fa fa-database"></i></a></p>
         <p class="w3-right">
             <a href="login.php"><i class="fa fa-user w3-margin-right"></i></a>
             <a href="carrinho.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>

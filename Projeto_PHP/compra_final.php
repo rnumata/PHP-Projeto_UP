@@ -1,12 +1,7 @@
 <?php
 require_once 'funcoesmysql.php';
 
-    /* Caso selecionado botão excluir */
-    if(!empty($_GET)){
-        $id = $_GET['id'];
-        $excluir = excluiritem($id);
-        echo $excluir;
-    }
+
 
 
 ?>
@@ -44,7 +39,7 @@ require_once 'funcoesmysql.php';
     </div><br>
 
 
-    <h1 style="text-align: center">Lista de item cadastrado</h1><br><br>
+    <h1 style="text-align: center">Lista de item Comprados</h1><br><br>
 
     <div class="container">
         <div class="row">
@@ -52,12 +47,9 @@ require_once 'funcoesmysql.php';
             <table class="table">
                 <tr>
                     <th>Imagem</th>
-                    <th>Código</th>
-                    <th>Descrição</th>
-                    <th>Tamanho</th>
-                    <th>Valor R$</th>
-                    <th></th>
-                    <th></th>
+                    <th>Cliente</th>
+                    <th>Item</th>
+                    <th>Quantidade</th>
                 </tr>
 
             <?php
@@ -73,9 +65,6 @@ require_once 'funcoesmysql.php';
                     <td> <?=$item['descricao'];?> </td>
                     <td> <?=$item['tamanho'];?> </td>
                     <td> <?=$item['valor'];?> </td>
-
-                    <td><a class="btn btn-primary" href="produto.php?acao=alterar&id=<?= $item['id'] ?>">Alterar</a></td>
-                    <td><a class="btn btn-danger" href="listagem.php?acao=excluir&id=<?= $item['id'] ?>">Excluir</a></td>
                 </tr>
 
                 <?php
